@@ -1,16 +1,20 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { createPost } from "../../api/postsApi.js";
 import "./CreatePost.css";
 
 function CreatePost() {
   const [community, setCommunity] = useState("");
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
+  const navigate = useNavigate();
 
   function handleSubmit(e) {
     e.preventDefault();
-    const post = { community, title, body };
-    console.log("Creating post:", post);
+    createPost({ community, title: title.trim(), body });
+    navigate("/"); // go to the feed after posting
   }
+
 
   return (
     <div className="cp-page">
