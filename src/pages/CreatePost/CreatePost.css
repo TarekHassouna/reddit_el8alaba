@@ -1,0 +1,108 @@
+.cp-page {
+  max-width: 740px;
+  margin: 0 auto;
+  padding: 24px 16px;
+  font-family: Arial, sans-serif;
+  color: #eef1f3;
+}
+
+.cp-heading {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0 0 20px;
+}
+
+/* No white box: the form sits on the dark page */
+.cp-card {
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+/* Rounded pill, like "Select Community" */
+.cp-select {
+  padding: 10px 16px;
+  margin-bottom: 20px;
+  border: 1px solid #2a3236;
+  border-radius: 999px;
+  background: #0e1113;
+  color: #eef1f3;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.cp-title-wrap {
+  position: relative;
+}
+
+.cp-input,
+.cp-textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 16px;
+  margin-bottom: 16px;
+  background: transparent;
+  border: 1px solid #2a3236;
+  border-radius: 16px;
+  color: #eef1f3;
+  font-size: 16px;
+  font-family: inherit;
+}
+
+.cp-input::placeholder,
+.cp-textarea::placeholder {
+  color: #8ba2ad;
+}
+
+.cp-input {
+  padding-right: 64px;
+}
+
+.cp-textarea {
+  resize: vertical;
+  min-height: 160px;
+}
+
+.cp-input:focus,
+.cp-textarea:focus,
+.cp-select:focus {
+  outline: none;
+  border-color: #8ba2ad;
+}
+
+.cp-counter {
+  position: absolute;
+  right: 16px;
+  top: 14px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #8ba2ad;
+}
+
+.cp-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 8px;
+}
+
+.cp-submit {
+  background: #0045ac;
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.cp-submit:hover:not(:disabled) {
+  background: #0053cc;
+}
+
+.cp-submit:disabled {
+  background: #1a282d;
+  color: #5c6c74;
+  cursor: not-allowed;
+}
