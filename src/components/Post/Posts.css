@@ -1,0 +1,19 @@
+.post {
+  border-radius: 16px;
+  padding: 12px 16px;
+  margin-bottom: 12px;
+  color: white;
+}
+.post:hover {
+  background-color: #2a3236;
+}
+
+.post-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.score {
+  margin: 8px 0;
+}

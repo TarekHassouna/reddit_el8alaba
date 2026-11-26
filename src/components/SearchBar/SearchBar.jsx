@@ -1,6 +1,7 @@
 import redditLogo from "../../assets/reddit-logo.svg";
 import "./SearchBar.css";
 
+
 function SearchBar() {
     return(
     <div className="search">

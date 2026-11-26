@@ -1,25 +1,20 @@
-const KEY = "posts";
+let posts = [];
 
-// Returns all saved posts (newest first). Returns [] if there are none.
 export function getPosts() {
-  const saved = localStorage.getItem(KEY);
-  return saved ? JSON.parse(saved) : [];
+  return posts;
 }
 
-// Builds a full post object, saves it, and returns it.
 export function createPost({ community, title, body }) {
-  const posts = getPosts();
-
   const post = {
-    id: Date.now(),                       // unique number
+    id: Date.now(),
     community,
     title,
     body,
-    author: "guest",                      // req 1 will replace this
-    score: 0,                             // req 8 (voting) starts here
+    author: "guest",
+    score: 0,
     createdAt: new Date().toISOString(),
   };
 
-  localStorage.setItem(KEY, JSON.stringify([post, ...posts]));
+  posts = [post, ...posts];
   return post;
 }
