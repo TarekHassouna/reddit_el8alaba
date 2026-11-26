@@ -5,6 +5,7 @@ import CreatePost from "./pages/CreatePost/CreatePost.jsx";
 import Login from "./pages/Login/Login.jsx";
 import Signup from "./pages/Signup/Signup.jsx";
 import Feed from "./components/Feed/Feed.jsx";
+import ViewProfile from './pages/ViewProfile/viewProfile.jsx';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/submit" element={<CreatePost />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
+        <Route path="/usr" element={<ViewProfile />}/>
       </Routes>
     </div>
   )

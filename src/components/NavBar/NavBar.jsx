@@ -1,6 +1,7 @@
 import SearchBar from '../SearchBar/SearchBar.jsx'
 import { Link } from "react-router-dom";
 import './NavBar.css'
+import ProfileMenu from './ProfileMenu.jsx';
 
 function NavBar() {
   return (
@@ -15,6 +16,8 @@ function NavBar() {
         <Link to="/submit" className="navbar-create">
           + Create
         </Link>
+        <ProfileMenu />
+
       </div>
     </div>
   )
