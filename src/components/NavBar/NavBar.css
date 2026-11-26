@@ -31,3 +31,8 @@
 .navbar-create:hover {
   background: #2a3236;
 }
+
+.navbar-buttons {
+  display: flex;
+  gap: 10px;
+}

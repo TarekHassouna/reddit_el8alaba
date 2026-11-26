@@ -8,10 +8,14 @@ function NavBar() {
       <h1 id="title">Reddit</h1>
       <SearchBar />
 
-      <Link to="/submit" className="navbar-create">
-        + Create
-      </Link>
-      
+      <div className="navbar-buttons">
+        <Link to="/login" className="navbar-create">
+          Log in / Sign up
+        </Link>
+        <Link to="/submit" className="navbar-create">
+          + Create
+        </Link>
+      </div>
     </div>
   )
 }
