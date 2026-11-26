@@ -1,14 +1,14 @@
 .navbar {
   display: flex;
   align-items: center;
-  background: #1a1a1b;
   gap: 16px;
   padding: 0 16px;
   height: 56px;
+  border-bottom: 1px solid #eef1f3;
 }
 
 #title {
-    font-size: 20px;
+    font-size: 30px;
     font-weight: 600;
     color: #eef1f3;
 }
