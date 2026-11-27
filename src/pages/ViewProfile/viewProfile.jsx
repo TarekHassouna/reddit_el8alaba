@@ -1,6 +1,7 @@
 import profilePic from "../../assets/profilePic.png"
 import ViewBar from "./viewBar";
-import ProfileSumm from "./ProfileSumm";
+import ProfileSumm from "./ProfileSumm"
+import Overview from "./ProfileOptions/Overview";
 
 function ViewProfile(){
     const username = "KareemAdel4805";
@@ -23,8 +24,9 @@ function ViewProfile(){
                         u/{username}
                     </div>
                 </div>
-
+                
                 <ViewBar />
+                <Overview />
             </div>
 
             <ProfileSumm/>

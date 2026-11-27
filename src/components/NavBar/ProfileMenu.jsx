@@ -1,6 +1,9 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import profilePic from "../../assets/profilePic.png"
+import settings from "../../assets/settings.png"
+import door from "../../assets/door.png"
+import toggle from "../../assets/toggle.png"
 
 function ProfileMenu(){
     const username= "KareemAdel4805"
@@ -43,8 +46,8 @@ function ProfileMenu(){
                     }}
                 >
 
-                <Link to="/usr">
-                    <div style={{...menuItemStyle, display: 'flex', alignItems: 'center', gap: '5px'}}>
+                <Link to={`/user/${username}`} style={{...menuItemStyle, display: 'flex', alignItems: 'center', gap: '5px'}}>
+                    <div style={{display:'flex', gap:'10px'}}>
                         <img src={profilePic}
                         alt= "ProfilePic" 
                         style={{
@@ -53,22 +56,32 @@ function ProfileMenu(){
                         borderRadius:'16px'
                         }}></img>
                         <div>
-                        View Profile
-                        u/{username}
+                            View Profile
+                            <br></br>
+                            u/{username}
                         </div>
                     </div>
                 </Link>
 
-                <Link to="/">
-                    <div style={menuItemStyle}>Settings</div>
+                <Link to="/" style={{...menuItemStyle, display: 'flex', alignItems: 'center', gap: '5px'}}>
+                    <div style={{display:'flex', gap:'1px'}}>
+                        <img src={settings} alt="settings" style={{width:'20px', height:'20px', padding:'6px 0 0 6px'}}></img>
+                        <div style={menuItemStyle}>Settings</div>
+                    </div>
                 </Link>
 
-                <Link to="/">
-                    <div style={menuItemStyle}>Display Mode</div>
+                <Link to="/" style={{...menuItemStyle, display: 'flex', alignItems: 'center', gap: '5px'}}>
+                    <div style={{display:'flex', gap:'1px'}}>
+                        <img src={toggle} alt="toggle" style={{width:'20px', height:'20px', padding:'6px 0 0 6px'}}></img>
+                        <div style={menuItemStyle}>Display Mode</div>
+                    </div>
                 </Link>
 
-                <Link to="/">
-                    <div style={menuItemStyle}>Log Out</div>
+                <Link to="/" style={{...menuItemStyle, display: 'flex', alignItems: 'center', gap: '5px'}}>
+                    <div style={{display:'flex', gap:'1px'}}>
+                        <img src={door} alt="logOut" style={{width:'20px', height:'20px', padding:'6px 0 0 6px'}}></img>
+                        <div style={menuItemStyle}>Log Out</div>
+                    </div>
                 </Link>
 
                 </div>
