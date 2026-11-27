@@ -12,7 +12,7 @@ function Login() {
     e.preventDefault();
 
     const users = JSON.parse(localStorage.getItem("users") || "[]");
-    const user = users.find((u) => u.email === email && u.password === password);
+    const user = users.find((u) => u.email === email.toLowerCase() && u.password === password);
 
     if (!user) {
       setError("Wrong email or password");
@@ -34,7 +34,7 @@ function Login() {
 
         <button type="submit">Log in</button>
         <p className="auth-switch">
-          New here? <Link to="/signup">Sign up</Link>
+          New to Reddit? <Link to="/signup">Sign up</Link>
         </p>
       </form>
     </div>

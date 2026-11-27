@@ -12,7 +12,7 @@ function CreatePost() {
   function handleSubmit(e) {
     e.preventDefault();
     createPost({ community, title: title.trim(), body });
-    navigate("/"); // go to the feed after posting
+    navigate("/"); 
   }
 
 

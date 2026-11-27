@@ -1,4 +1,6 @@
 import "./Posts.css";   
+import Arrows from "../arrows/arrows.jsx";
+import { useState } from "react";
 function timeAgo(dateString) {
   const seconds = Math.floor((Date.now() - new Date(dateString)) / 1000);
 
@@ -13,7 +15,11 @@ function timeAgo(dateString) {
   const days = Math.floor(hours / 24);
   return `${days} d. ago`;
 }
+
 function Post({ post }) {
+  const [countVotes] = useState(post.votes??0);
+  const[userVote, setUserVote] = useState(1);
+
   return (
     <div className="post">
         <div className="post-header">
@@ -22,8 +28,7 @@ function Post({ post }) {
         </div>
       <h2 className="title">{post.title}</h2>
       <p className="body">{post.body}</p>
-      <p className="score">{post.score}</p>
-  
+      <Arrows onUpvote={()=>(setUserVote(userVote===1?0:1))} onDownvote={() => (setUserVote(userVote===-1?0:-1))} votes={countVotes+userVote}  userVote={userVote}/>
     </div>
   );
 }

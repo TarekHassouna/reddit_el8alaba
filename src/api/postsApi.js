@@ -11,7 +11,7 @@ export function createPost({ community, title, body }) {
     title,
     body,
     author: "guest",
-    score: 0,
+    votes: 0,
     createdAt: new Date().toISOString(),
   };
 

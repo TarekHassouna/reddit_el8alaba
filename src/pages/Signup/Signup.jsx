@@ -24,12 +24,12 @@ function Signup() {
     }
 
     const users = JSON.parse(localStorage.getItem("users") || "[]");
-    if (users.find((u) => u.email === email)) {
+    if (users.find((u) => u.email === email.toLowerCase())) {
       setError("This email is already used");
       return;
     }
 
-    users.push({ name, email, phone, age, password });
+    users.push({ name, email: email.toLowerCase(), phone, age, password });
     localStorage.setItem("users", JSON.stringify(users));
     localStorage.setItem("currentUser", name);
     navigate("/");
@@ -43,7 +43,7 @@ function Signup() {
 
         <input placeholder="Full name" value={name} onChange={(e) => setName(e.target.value)} required />
         <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required />
-        <input type="tel" placeholder="Phone number" value={phone} onChange={(e) => setPhone(e.target.value)} required />
+        <input type="tel" pattern="[0-9+]{8,15}" title="Numbers only (8 to 15 digits)" placeholder="Phone number" value={phone} onChange={(e) => setPhone(e.target.value)} required />
         <input type="number" placeholder="Age" value={age} onChange={(e) => setAge(e.target.value)} required />
         <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} required />
 
